@@ -1,2 +1,2 @@
-# llmj
+# LLMJ
 LLM-as-a-judge
