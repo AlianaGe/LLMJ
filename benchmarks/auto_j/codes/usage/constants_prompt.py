@@ -46,9 +46,9 @@ def llama2_wrapper(usr_msg, sys_msg=None):
         return PROMPT_INPUT_SYSTEM.format(input=usr_msg, system_message=sys_msg)
 
 
-def build_autoj_input(prompt, resp1, resp2=None, protocol="single"):
+def build_autoj_input(prompt, resp1, resp2=None, protocol="single",sys_msg=None):
     user_msg = protocol_mapping[protocol].format(prompt=prompt, response=resp1, response_another=resp2)
-    return llama2_wrapper(user_msg, )
+    return llama2_wrapper(user_msg, sys_msg)
 
 
 if __name__ == '__main__':
